@@ -1,5 +1,9 @@
 class TweetsController < ApplicationController
 
+    get '/tweets' do
+        erb :'tweets/tweets'
+    end
+    
     get '/tweets/new' do
         #load create tweet form
     end
