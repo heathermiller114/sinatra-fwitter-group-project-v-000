@@ -1,2 +1,11 @@
 <!--- should include link to edit --->
 <!--- should include link to delete --->
+<h1><%= @tweet.content %></h1>
+
+<h3><a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a></h3>
+
+<form method="POST" action="/tweets/<%= @tweet.id %>/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete Tweet">
+</form>
+
